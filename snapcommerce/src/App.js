@@ -1,18 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import logo from './logo.svg';
+import './App.css';
+import Hello from './components/Hello';
 import LoginPage from './components/LoginPage/LoginPage';
 import MainPage from './components/MainPage/MainPage';
 import ProductPage from './components/ProductPage/ProductPage';
 
+
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/login" component={LoginPage} />
-        <Route path="/main" component={MainPage} />
-        <Route path="/product" component={ProductPage} />
-      </Switch>
-    </Router>
+    <div className="App">
+      <Hello></Hello>
+      <LoginPage></LoginPage>
+      <MainPage></MainPage>
+      <ProductPage></ProductPage>
+    </div>
   );
 }
 
