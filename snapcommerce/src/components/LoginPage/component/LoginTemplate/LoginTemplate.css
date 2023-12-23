@@ -1,0 +1,131 @@
+:root {
+  --image-width: 60vw;
+}
+
+.login-template {
+  display: flex;
+}
+
+.form {
+  flex-direction: column;
+  width: calc(100vw - var(--image-width));
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.form h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-right: auto;
+  margin-bottom: 8px;
+}
+
+.form p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: auto;
+  margin-bottom: 64px;
+  margin-top: 0;
+}
+
+.form button {
+  width: 100%;
+  font-weight: 800;
+  color: var(--background);
+  margin-top: 32px;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.form .account-option {
+  margin-top: 25vh;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form .account-option a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.form .account-option a:hover {
+  text-decoration: underline;
+}
+
+.image-overlay {
+  width: var(--image-width);
+  object-fit: cover;
+  object-position: left;
+  border-radius: 24px 0 0 24px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px 12px;
+  outline: none;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--border);
+}
+
+.form-control {
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+  gap: 0.5em;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  color: var(--text);
+  width: 1.2em;
+  height: 1.2em;
+  border: 0.2em solid var(--text);
+  border-radius: 0.2em;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1.2em 1.2em var(--primary);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --image-width: 0;
+  }
+}
