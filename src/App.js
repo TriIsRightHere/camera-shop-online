@@ -98,9 +98,9 @@ function App() {
         <div>
             <header className="h-[146.667px] flex items-center">
                 <div className="w-2/5 py-[26px] flex text-[32px] justify-around items-center">
-                    <div>Home</div>
-                    <div>Products</div>
-                    <div>Contact</div>
+                    <button>Home</button>
+                    <button>Products</button>
+                    <button>Contact</button>
                 </div>
                 <div className="w-1/5 flex justify-center">
                     <img src={camera} alt="logo" />
@@ -109,25 +109,25 @@ function App() {
                     <div className="w-3/5 flex justify-end items-center">
                         <input
                             placeholder="Subscribe in our newsletter..."
-                            className="text-center w-[386.667px] h-[61.333px] rounded-[26.667px]"
+                            className="text-center w-[340px] h-[61.333px] rounded-[26.667px]"
                         />
                     </div>
                     <div className="flex m-auto justify-between">
-                        <div className="px-3">
+                        <button className="px-3">
                             <img
                                 src={search}
                                 alt="search"
                                 className="w-[45px] h-[45px] object-cover"
                             />
-                        </div>
-                        <div className="px-3">
+                        </button>
+                        <button className="px-3">
                             <img
                                 src={heart}
                                 alt="heart"
                                 className="w-[45px] h-[45px] object-cover"
                             />
-                        </div>
-                        <div className="px-3 relative">
+                        </button>
+                        <button className="px-3 relative">
                             <img
                                 src={cart}
                                 alt="cart"
@@ -139,7 +139,7 @@ function App() {
                                     {count}
                                 </span>
                             </span>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </header>
@@ -331,12 +331,12 @@ function App() {
                             </h2>
                         </div>
                         <div className="flex  space-x-4 items-center mt-[55px]">
-                            <button className="px-[66px] py-[13px] bg-[#B4E907] rounded-[133.333px]  border border-black">
+                            <button className="px-[66px] py-[13px] bg-[#B4E907] rounded-[133.333px]  border border-black"
+                                onClick={() => setCount(count + 1)}>
                                 Add To Cart
                             </button>
                             <button
                                 className="px-[66px] py-[13px] bg-black rounded-[133.333px] border border-black text-white"
-                                onClick={() => setCount(count + 1)}
                             >
                                 Buy It Now
                             </button>
