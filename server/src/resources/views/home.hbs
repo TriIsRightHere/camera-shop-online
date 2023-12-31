@@ -1,0 +1,21 @@
+<div class="mt-4">
+    <div class="row">
+
+        {{#each cameras}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card cameras-item">
+                <a href="/cameras/{{this.slug}}">
+                    <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+                </a>
+                <div class="card-body">
+                    <a href="/cameras/{{this.slug}}">
+                        <h5 class="card-title">{{this.name}}</h5>
+                    </a>
+                    <p class="card-text">{{this.description}}</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
