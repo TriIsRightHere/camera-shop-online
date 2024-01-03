@@ -1,0 +1,26 @@
+{{> ../includes/head}}
+
+<link rel="stylesheet" href="/css/orders.css">
+</head>
+
+<body>
+    {{> ../includes/navigation}}
+    <main>
+        {{#if (orders.length <= 0)}} <h1>Nothing there!</h1>
+            {{else}}
+            <ul class="orders">
+                {{#each orders}}
+                <li class="orders__item">
+                    <h1>Order - # {{_id}}</h1>
+                    <h2><a href="/orders/{{_id}}">Invoice</a></h2>
+                    <ul class="orders__products">
+                        {{#each products}}
+                        <li class="orders__products-item">{{this.product.title}} ({{this.quantity}})</li>
+                        {{/each}}
+                    </ul>
+                </li>
+                {{/each}}
+            </ul>
+            {{/if}}
+    </main>
+    {{> ../includes/end}}

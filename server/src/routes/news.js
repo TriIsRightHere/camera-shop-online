@@ -1,11 +1,12 @@
-// news.js
+// // news.js
 
-const express = require('express');
-const router = express.Router();
-const newsController = require('../app/controllers/NewsController');
+// const express = require('express');
+// const router = express.Router();
+// const newsController = require('../app/controllers/NewsController');
 
 
-router.get('/:slug', newsController.show);
-router.get('/', newsController.index);
+// router.get('/:slug', newsController.show);
+// router.get('/', newsController.index);
 
-module.exports = router;
+
+// module.exports = router;
