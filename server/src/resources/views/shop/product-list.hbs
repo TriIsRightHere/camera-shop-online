@@ -1,10 +1,10 @@
-{{> ../includes/head}}
+{{!-- {{> head}}
 
 <link rel="stylesheet" href="/css/product.css">
 </head>
 
 <body>
-    {{> ../includes/navigation}}
+    {{> navigation}}
 
     <main>
         {{#if (prods.length > 0)}}
@@ -24,7 +24,7 @@
                 <div class="card__actions">
                     <a href="/products/{{_id}}" class="btn">Details</a>
                     {{#if isAuthenticated}}
-                    {{> ../includes/add-to-cart}}
+                    {{> add-to-cart}}
                     {{/if}}
                 </div>
             </article>
@@ -34,4 +34,4 @@
         <h1>No Products Found!</h1>
         {{/if}}
     </main>
-    {{> ../includes/end}}
+    {{> end}} --}}

@@ -1,11 +1,12 @@
 
 
-// const express = require('express');
-// const router = express.Router();
-// const camerasController = require('../app/controllers/CamerasController');
+const express = require('express');
+const router = express.Router();
+const camerasController = require('../controllers/CamerasController');
 
 
-// router.get('/:slug', camerasController.show);
+router.get('/:create', camerasController.create);
+router.post('/:store', camerasController.store);
+router.get('/:slug', camerasController.show);
 
-
-// module.exports = router;
+module.exports = router;
